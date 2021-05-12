@@ -36,8 +36,6 @@ const Rickroll: React.FC<RickrollProps> = ({ muted, setMuted, addRoll }) => {
       <ReactPlayer
         ref={ref}
         url="https://www.youtube.com/embed/oHg5SJYRHA0"
-        width="1080px"
-        height="630px"
         playing={play}
         muted={muted}
         onReady={() => {
