@@ -13,6 +13,10 @@ const ClickMeLol = styled.div`
   background: none;
 `;
 
+const RickWrapper = styled.div`
+  max-width: 100vw;
+`;
+
 interface RickrollProps {
   muted: boolean;
   setMuted: (value: boolean) => void;
@@ -31,7 +35,7 @@ const Rickroll: React.FC<RickrollProps> = ({ muted, setMuted, addRoll }) => {
   };
 
   return (
-    <div onClick={(event) => handleClick(event)}>
+    <RickWrapper onClick={(event) => handleClick(event)}>
       <ClickMeLol onClick={(event) => handleClick(event)} />
       <ReactPlayer
         ref={ref}
@@ -44,8 +48,10 @@ const Rickroll: React.FC<RickrollProps> = ({ muted, setMuted, addRoll }) => {
         controls={false}
         loop
         fullscreen
+        width={"auto"}
+        height={"auto"}
       />
-    </div>
+    </RickWrapper>
   );
 };
 
