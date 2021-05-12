@@ -3,11 +3,9 @@ import Rickroll from "./RickRoll";
 import styled from "styled-components";
 import React, { useCallback, useEffect, useState } from "react";
 
-import superMario from "../assets/images/super-mario.png";
-
 const Layout = styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
 
   align-items: center;
   justify-content: center;
@@ -16,13 +14,11 @@ const Layout = styled.div`
 const ClickMe = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 50vw;
+  max-width: 75vw;
 
   align-items: center;
   padding: 5em;
   overflow: hidden;
-
-  font-size: 36px;
 
   &:hover {
     transform: scale(1.2);
@@ -32,6 +28,7 @@ const ClickMe = styled.div`
   img {
     height: 100%;
     width: 100%;
+    padding-bottom: 3em;
   }
 `;
 
@@ -64,7 +61,10 @@ const RickRollRoll: React.FC<RickRollRollProps> = ({ muted, setMuted }) => {
     <>
       {roll.length === 0 && (
         <ClickMe onClick={() => addRoll()}>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mario_Series_Logo.svg/1280px-Mario_Series_Logo.svg.png" />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Mario_Series_Logo.svg/1280px-Mario_Series_Logo.svg.png"
+            alt="Super mario"
+          />
           Klikk her for å starte spillet!
         </ClickMe>
       )}
