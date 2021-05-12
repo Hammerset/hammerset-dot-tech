@@ -35,7 +35,7 @@ const Rickroll: React.FC<RickrollProps> = ({ muted, setMuted, addRoll }) => {
       <ClickMeLol onClick={(event) => handleClick(event)} />
       <ReactPlayer
         ref={ref}
-        url="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        url="https://www.youtube.com/embed/oHg5SJYRHA0"
         width="1080px"
         height="630px"
         playing={play}
